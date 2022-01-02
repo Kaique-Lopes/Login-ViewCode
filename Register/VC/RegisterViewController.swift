@@ -56,6 +56,6 @@ extension RegisterViewController: RegisterScreenProtocol {
                 self.present(alert, animated: true, completion: nil)
             }
         })
-        print("cliquei em registrar")
+        print("cliquei em cadastrar")
     }
 }
