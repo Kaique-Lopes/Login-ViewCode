@@ -144,6 +144,14 @@ class LoginScreen: UIView {
         }
     }
     
+    public func getEmail() -> String {
+        return self.emailTextField.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return self.passwordTextField.text ?? ""
+    }
+    
     // MARK: - Create Function call constraints
     private func setupConstraints() {
         self.loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5).isActive = true
