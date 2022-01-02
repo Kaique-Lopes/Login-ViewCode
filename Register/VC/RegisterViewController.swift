@@ -39,14 +39,9 @@ extension RegisterViewController: UITextFieldDelegate {
 
 extension RegisterViewController: RegisterScreenProtocol {
     func actionRegisterButton() {
-        // create the alert
-
-    
-    
-    let email: String = self.registerScreen?.emailTextField.text ?? ""
-        let password: String = self.registerScreen?.passwordTextField.text ?? ""
+        guard let register = self.registerScreen else {return}
         
-        self.auth?.createUser(withEmail: email, password: password, completion: { result, error in
+        self.auth?.createUser(withEmail: register.getEmail(), password: register.getPassword(), completion: { result, error in
             if error != nil {
                 print(" DEU RUIM")
             } else {
