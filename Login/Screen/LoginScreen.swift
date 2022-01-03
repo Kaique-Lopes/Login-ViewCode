@@ -86,7 +86,7 @@ class LoginScreen: UIView {
         self.configSuperViews()
         self.configBackgroundColor()
         self.setupConstraints()
-        self.configEnable(on: false)
+        self.configEnable(isOn: false)
     }
     
     required init?(coder: NSCoder) {
@@ -123,18 +123,16 @@ class LoginScreen: UIView {
     }
     
     func validateTextFields() {
-        let email: String = self.emailTextField.text ?? ""
-        let password: String = self.passwordTextField.text ?? ""
-        
-        if !email.isEmpty && !password.isEmpty {
-            self.configEnable(on: true)
+
+        if !getEmail().isEmpty && !getPassword().isEmpty {
+            self.configEnable(isOn: true)
         } else {
-            self.configEnable(on: false)
+            self.configEnable(isOn: false)
         }
         
     }
     
-    func configEnable(on enable: Bool) {
+    func configEnable(isOn enable: Bool) {
         if enable {
             self.loginButton.setTitleColor(.black, for: .normal)
             self.loginButton.isEnabled = true
