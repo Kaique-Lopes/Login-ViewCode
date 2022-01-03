@@ -48,7 +48,10 @@ extension RegisterViewController: RegisterScreenProtocol {
             if error != nil {
                 
             } else {
-                self.alert?.getAlert(title: "Logou", message: "Usuario Logado")
+                self.alert?.getAlert(title: "Sucesso", message: "Conta Criada", completion: {
+                    self.navigationController?.popViewController(animated: true)
+                    
+                })
             }
         })
     }
