@@ -86,10 +86,7 @@ class RegisterScreen: UIView {
     }
     
     func validateTextFields() {
-        let email: String = self.emailTextField.text ?? ""
-        let password: String = self.passwordTextField.text ?? ""
-        
-        if !email.isEmpty && !password.isEmpty {
+        if !getEmail().isEmpty && !getPassword().isEmpty {
             self.configButtonEnable(on: true)
         } else {
             self.configButtonEnable(on: false)
