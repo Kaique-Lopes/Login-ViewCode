@@ -19,6 +19,7 @@ class HomeScreen: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         self.addSubview()
+        self.setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -30,7 +31,7 @@ class HomeScreen: UIView {
     }
     
     func setupConstraints() {
-        
+        self.tableView.anchor(top: self.safeAreaLayoutGuide.topAnchor, left: self.leftAnchor, right: self.rightAnchor)
     }
 
 }
