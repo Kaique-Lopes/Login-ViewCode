@@ -18,7 +18,7 @@ class RegisterScreen: UIView {
     func delegate(delegate: RegisterScreenProtocol){
         self.delegate = delegate
     }
-    // MARK: - image UIimageview
+
     lazy var imageAddUser: UIImageView = {
         var image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false

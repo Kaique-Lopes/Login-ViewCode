@@ -13,12 +13,14 @@ class RegisterViewController: UIViewController {
     // MARK: - Creating RegisterScreen instance for the viewcontroller to see its methods
     var registerScreen: RegisterScreen?
     var auth: Auth?
+    var alert: Alert?
     
     // MARK: - Create The UI Elements
     override func loadView() {
         self.registerScreen = RegisterScreen()
         self.view = self.registerScreen
         self.auth = Auth.auth()
+        self.alert = Alert(controller: self)
     }
     
     override func viewDidLoad() {
@@ -45,9 +47,7 @@ extension RegisterViewController: RegisterScreenProtocol {
             if error != nil {
                 print(" DEU RUIM")
             } else {
-                let alert = UIAlertController(title: "Conta Criada!", message: "Sua conta foi criada com sucesso!", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                self.alert?.getAlert(title: "Logou", message: "Usuario Logado")
             }
         })
     }
