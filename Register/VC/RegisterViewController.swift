@@ -45,7 +45,7 @@ extension RegisterViewController: RegisterScreenProtocol {
         
         self.auth?.createUser(withEmail: register.getEmail(), password: register.getPassword(), completion: { result, error in
             if error != nil {
-                print(" DEU RUIM")
+                
             } else {
                 self.alert?.getAlert(title: "Logou", message: "Usuario Logado")
             }
