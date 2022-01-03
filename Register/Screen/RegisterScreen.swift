@@ -18,7 +18,7 @@ class RegisterScreen: UIView {
     func delegate(delegate: RegisterScreenProtocol){
         self.delegate = delegate
     }
-    
+    // MARK: - image UIimageview
     lazy var imageAddUser: UIImageView = {
         var image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -117,6 +117,7 @@ class RegisterScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
