@@ -8,9 +8,12 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    var homescreen = HomeScreen()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.homescreen = HomeScreen()
+        self.view = self.homescreen
 
     }
 
