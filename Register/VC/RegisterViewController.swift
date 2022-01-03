@@ -45,12 +45,10 @@ extension RegisterViewController: RegisterScreenProtocol {
             if error != nil {
                 print(" DEU RUIM")
             } else {
-                print("DEu bom !")
                 let alert = UIAlertController(title: "Conta Criada!", message: "Sua conta foi criada com sucesso!", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
         })
-        print("cliquei em cadastrar")
     }
 }
