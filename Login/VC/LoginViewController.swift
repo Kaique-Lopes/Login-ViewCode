@@ -39,7 +39,6 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: LoginScreenProtocol{
     func actionLoginButton() {
-        print("Botao Login")
         guard let login = self.loginScreen else {return}
         self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { user, error in
             if error != nil {
