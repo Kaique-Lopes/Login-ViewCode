@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     // MARK: - Instance class LoginScreen, for acess methods
     var loginScreen: LoginScreen?
     var auth: Auth?
+    var alert: Alert?
     // MARK: - Ceated loadview method, to load methods from the Class LoginScreen
     
     override func loadView() {
@@ -25,6 +26,7 @@ class LoginViewController: UIViewController {
         self.loginScreen?.delegate(delegate: self)
         self.navigationController?.navigationBar.tintColor = .black
         self.auth = Auth.auth()
+        self.alert = Alert(controller: self)
     }
 }
 
@@ -32,6 +34,7 @@ extension LoginViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.loginScreen?.validateTextFields()
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     }
@@ -42,16 +45,12 @@ extension LoginViewController: LoginScreenProtocol{
         guard let login = self.loginScreen else {return}
         self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { user, error in
             if error != nil {
-                print("Verifique seus dados")
+                self.alert?.getAlert(title: "Atenção", message: "Erro ao logar", completion: nil)
             } else {
-               if user == nil {
-                    print("Tivemos um erro no servidor")
-                } else {
-                    let alert = UIAlertController(title: "Usuario Logado!", message: "Voce será redirecionado para a tela Home!", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                    print("usuario logado")
-                }
+                if user == nil {
+                    self.alert?.getAlert(title: "Atenção", message: "Verifique os dados e tente novamente mais tarde", completion: nil)           } else {
+                        self.alert?.getAlert(title: "Parabéns", message: "Usuario Logado com sucesso", completion: nil)
+                    }
             }
         })
     }
