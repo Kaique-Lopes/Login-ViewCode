@@ -12,7 +12,7 @@ class UserDetailTableViewCell: UITableViewCell {
 
     static var identifier: String = "UserDetailTableViewCell"
 
-    // MARK: - Image User
+    // MARK: - Create Image User
     lazy var userImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +21,7 @@ class UserDetailTableViewCell: UITableViewCell {
     }()
     
     
-    // MARK: - Label User
+    // MARK: - Create Label User
     lazy var userLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -29,4 +29,10 @@ class UserDetailTableViewCell: UITableViewCell {
         return label
     }()
     
+    // MARK: - Create Function for add elements in view
+    func addSubview() {
+        self.contentView.addSubview(userImageView)
+        self.contentView.addSubview(userLabel)
+
+    }
 }
