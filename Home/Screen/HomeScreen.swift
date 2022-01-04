@@ -13,6 +13,7 @@ class HomeScreen: UIView {
         var tableview = UITableView()
         tableview.translatesAutoresizingMaskIntoConstraints = false
         tableview.backgroundColor = .white
+        tableview.register(UserDetailTableViewCell.self, forCellReuseIdentifier: UserDetailTableViewCell.identifier)
          return tableview
     }()
     
