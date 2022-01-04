@@ -46,6 +46,11 @@ class UserDetailTableViewCell: UITableViewCell {
 
     }
     
+    func setupCell(data: DataUser) {
+        self.userLabel.text = data.name
+        self.userImageView.image = UIImage(named: data.imageName)
+    }
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             
