@@ -6,9 +6,26 @@
 //
 
 import UIKit
+import SwiftUI
 
 class UserDetailTableViewCell: UITableViewCell {
 
-    
+    static var identifier: String = "UserDetailTableViewCell"
 
+    // MARK: - Image User
+    lazy var userImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    
+    // MARK: - Label User
+    lazy var userLabel: UILabel = {
+        let label = UILabel()
+        
+        return label
+    }()
+    
 }
