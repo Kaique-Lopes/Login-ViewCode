@@ -35,9 +35,6 @@ extension HomeViewController: UITableViewDataSource {
         cell?.setupCell(data: self.datas[indexPath.row])
         return cell ?? UITableViewCell()
     }
-    
-    
-    
 }
 
 extension HomeViewController: UITableViewDelegate {
