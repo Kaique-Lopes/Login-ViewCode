@@ -24,7 +24,8 @@ class UserDetailTableViewCell: UITableViewCell {
     // MARK: - Label User
     lazy var userLabel: UILabel = {
         let label = UILabel()
-        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
         return label
     }()
     
