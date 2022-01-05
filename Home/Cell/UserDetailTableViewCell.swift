@@ -6,15 +6,21 @@
 //
 
 import UIKit
-import SwiftUI
 
 class UserDetailTableViewCell: UITableViewCell {
 
     static var identifier: String = "UserDetailTableViewCell"
     
+    lazy var descriptionCell: UserDetailView = {
+        var view = UserDetailView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -23,11 +29,17 @@ class UserDetailTableViewCell: UITableViewCell {
     
     // MARK: - Create Function for add elements in view
     func addSubview() {
+        self.contentView.addSubview(descriptionCell)
     }
     
     func setupCell(data: DataUser) {
+        self.descriptionCell.userLabel.text = data.name
+        self.descriptionCell.userImageView.image = UIImage(named: data.imageName)
 //        self.userLabel.text = data.name
 //        self.userImageView.image = UIImage(named: data.imageName)
     }
     
+    func setupConstraints() {
+        self.descriptionCell.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 5)
+    }
 }
