@@ -43,7 +43,6 @@ class HomeScreen: UIView {
     
     
     func setupConstraints() {
-//        self.tableView.anchor(top: self.safeAreaLayoutGuide.topAnchor, left: self.leftAnchor, right: self.rightAnchor)
         NSLayoutConstraint.activate([
             self.tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             self.tableView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
