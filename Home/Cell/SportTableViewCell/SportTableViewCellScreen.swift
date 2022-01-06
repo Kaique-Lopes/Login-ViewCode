@@ -23,6 +23,7 @@ class SportTableViewCellScreen: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview()
+        configConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -31,5 +32,11 @@ class SportTableViewCellScreen: UIView {
     
     func addSubview() {
         self.addSubview(collectionView)
+    }
+    
+    func configConstraints() {
+        NSLayoutConstraint.activate([
+            self.collectionView.anchor(top: <#T##NSLayoutYAxisAnchor?#>, left: <#T##NSLayoutXAxisAnchor?#>, bottom: <#T##NSLayoutYAxisAnchor?#>, right: <#T##NSLayoutXAxisAnchor?#>, paddingTop: <#T##CGFloat#>, paddingLeft: <#T##CGFloat#>, paddingBottom: <#T##CGFloat#>, paddingRight: <#T##CGFloat#>, width: <#T##CGFloat?#>, height: <#T##CGFloat?#>)
+        ])
     }
 }
