@@ -16,6 +16,7 @@ class SportTableViewCellScreen: UIView {
         collectionView.delaysContentTouches = false
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
+        collectionView.setCollectionViewLayout(layout, animated: false)
         return collectionView
     }()
 }
