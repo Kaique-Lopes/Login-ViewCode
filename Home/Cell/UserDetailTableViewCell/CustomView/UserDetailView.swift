@@ -17,7 +17,6 @@ class UserDetailView: UIView {
         return imageView
     }()
     
-    
     // MARK: - Create Label User
     lazy var userLabel: UILabel = {
         let label = UILabel()

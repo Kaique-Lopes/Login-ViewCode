@@ -9,6 +9,4 @@ import UIKit
 
 class SportTableViewCell: UITableViewCell {
     static var identifier: String = "SportTableViewCell"
-    
-    
 }
