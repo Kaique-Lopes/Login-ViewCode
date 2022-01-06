@@ -22,9 +22,14 @@ class SportTableViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        addSubview()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func addSubview() {
+        self.addSubview(collectionView)
     }
 }
