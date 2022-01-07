@@ -54,7 +54,6 @@ class UserDetailView: UIView {
             // MARK: - userLabel - Label
             self.userLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             self.userLabel.leadingAnchor.constraint(equalTo: self.userImageView.trailingAnchor, constant: 25),
-
         ])
     }
 }

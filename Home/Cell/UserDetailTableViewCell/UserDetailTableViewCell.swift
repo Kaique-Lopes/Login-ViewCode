@@ -19,8 +19,8 @@ class UserDetailTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview()
-        setupConstraints()
+        self.addSubview()
+        self.setupConstraints()
     }
     
     required init?(coder: NSCoder) {
