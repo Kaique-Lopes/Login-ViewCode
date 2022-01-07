@@ -23,7 +23,7 @@ class SportTableViewCellScreen: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview()
-//        configConstraints()
+        configConstraints()
     }
     
     required init?(coder: NSCoder) {
