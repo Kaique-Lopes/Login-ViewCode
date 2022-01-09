@@ -30,6 +30,11 @@ class SportTableViewCellScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource){
+        self.collectionView.delegate = delegate
+        self.collectionView.dataSource = dataSource
+    }
+    
     func addSubview() {
         self.addSubview(collectionView)
     }
