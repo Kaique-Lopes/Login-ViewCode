@@ -20,7 +20,7 @@ class SportTableViewCellScreen: UIView {
         return collectionView
     }()
     
-    override init(frame: CGRect) {
+    override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         addSubview()
         configConstraints()
