@@ -8,5 +8,5 @@
 import UIKit
 
 class SportCollectionViewCell: UICollectionViewCell {
-    
+    static let identifier: String = "SportCollectionViewCell"
 }
