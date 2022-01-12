@@ -33,5 +33,7 @@ class SportCollectionViewCellScreen: UIView {
     }
     
     // MARK: - Configuração das Constraints dos componentes
-    func setupConstraints() {}
+    func setupConstraints() {
+        self.viewBackground.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor)
+    }
 }
