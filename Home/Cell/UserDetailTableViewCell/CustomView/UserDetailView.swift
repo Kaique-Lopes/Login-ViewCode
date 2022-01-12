@@ -47,7 +47,7 @@ class UserDetailView: UIView {
             
             // MARK: - userImageView - UIImageview
             self.userImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            self.userImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: <#T##CGFloat#>),
+            self.userImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.userImageView.heightAnchor.constraint(equalToConstant: 80),
             self.userImageView.widthAnchor.constraint(equalToConstant: 80),
         
