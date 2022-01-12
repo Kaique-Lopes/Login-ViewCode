@@ -20,6 +20,7 @@ class SportCollectionViewCellScreen: UIView {
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         self.addSubview()
+        self.setupConstraints()
     }
     
     // MARK: - Erro
