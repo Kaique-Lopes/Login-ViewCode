@@ -11,7 +11,7 @@ class SportCollectionViewCell: UICollectionViewCell {
     static let identifier: String = "SportCollectionViewCell"
     let sportCollectionViewCellScreen: SportCollectionViewCellScreen = SportCollectionViewCellScreen()
 
-    override init(frame: CGRect = .zero){
+    override init(frame: CGRect){
         super.init(frame: frame)
     }
     
@@ -19,7 +19,10 @@ class SportCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    func addSubView() {
+        self.sportCollectionViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
+        self.contentView.addSubview(self.sportCollectionViewCellScreen)
+    }
     
     
 }
