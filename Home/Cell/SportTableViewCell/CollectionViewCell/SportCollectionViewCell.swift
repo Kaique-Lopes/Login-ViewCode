@@ -24,5 +24,7 @@ class SportCollectionViewCell: UICollectionViewCell {
         self.contentView.addSubview(self.sportCollectionViewCellScreen)
     }
     
-    
+    func configConstraints() {
+        self.sportCollectionViewCellScreen.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor)
+    }
 }
