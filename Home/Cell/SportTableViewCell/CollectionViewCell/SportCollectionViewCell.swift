@@ -13,6 +13,8 @@ class SportCollectionViewCell: UICollectionViewCell {
 
     override init(frame: CGRect){
         super.init(frame: frame)
+        self.addSubView()
+        self.configConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -22,6 +24,7 @@ class SportCollectionViewCell: UICollectionViewCell {
     func addSubView() {
         self.sportCollectionViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.sportCollectionViewCellScreen)
+        
     }
     
     func configConstraints() {
