@@ -9,11 +9,21 @@ import UIKit
 
 class SportCollectionViewCellScreen: UIView {
 
-    // MARK: - Criação do componente viewBackground
-    lazy var viewBackground: UIView = {
-        var view = UIView()
-        view.backgroundColor = .cyan
-        return view
+    // MARK: - Criação de Componentes
+    lazy var imageView: UIImageView = {
+        var imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.backgroundColor = .green
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    lazy var sportLabel: UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.textColor = .darkGray
+        return label
     }()
 
     // MARK: - Inicializador
@@ -30,11 +40,12 @@ class SportCollectionViewCellScreen: UIView {
     
     // MARK: - Adicionando Elemento na view
     func addSubview(){
-        self.addSubview(viewBackground)
+        self.addSubview(imageView)
+        self.addSubview(sportLabel)
     }
     
     // MARK: - Configuração das Constraints dos componentes
     func setupConstraints() {
-        self.viewBackground.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor)
+        self.imageView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor)
     }
 }
