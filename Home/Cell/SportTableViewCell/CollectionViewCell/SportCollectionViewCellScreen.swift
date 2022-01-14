@@ -46,6 +46,21 @@ class SportCollectionViewCellScreen: UIView {
     
     // MARK: - Configuração das Constraints dos componentes
     func setupConstraints() {
-        self.imageView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor)
+        self.imageView.anchor(top: self.topAnchor,
+                              left: self.leftAnchor,
+                              bottom: self.sportLabel.topAnchor,
+                              right: self.rightAnchor,
+                              paddingTop: 10,
+                              paddingLeft: 10,
+                              paddingBottom: 10,
+                              paddingRight: 10)
+        
+        self.sportLabel.anchor(left: self.leftAnchor,
+                               bottom: self.bottomAnchor,
+                               right: self.rightAnchor,
+                               paddingLeft: 10,
+                               paddingBottom: 10,
+                               paddingRight: 10,
+                               height: 20)
     }
 }
