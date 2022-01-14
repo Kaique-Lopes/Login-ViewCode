@@ -27,6 +27,7 @@ class SportCollectionViewCell: UICollectionViewCell {
     // MARK: - Funcao que recebe um dado da Model (Sport)
     func setupCell(data: Sport) {
         self.sportCollectionViewCellScreen.imageView.image = UIImage(named: data.nameImage)
+        self.sportCollectionViewCellScreen.sportLabel.text = data.name
     }
     
     func addSubView() {
