@@ -10,5 +10,5 @@ import UIKit
 
 struct Sport {
     var name: String
-    var image: String
+    var nameImage: String
 }

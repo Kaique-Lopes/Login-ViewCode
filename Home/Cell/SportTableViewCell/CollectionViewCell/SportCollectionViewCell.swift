@@ -8,7 +8,10 @@
 import UIKit
 
 class SportCollectionViewCell: UICollectionViewCell {
+    // MARK: - Identificador de celula
     static let identifier: String = "SportCollectionViewCell"
+    
+    // MARK: - Referencia da classe sportCollectionViewCellScreen para acessar seus métodos
     let sportCollectionViewCellScreen: SportCollectionViewCellScreen = SportCollectionViewCellScreen()
 
     override init(frame: CGRect){
@@ -19,6 +22,11 @@ class SportCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Funcao que recebe um dado da Model (Sport)
+    func setupCell(data: Sport) {
+        self.sportCollectionViewCellScreen.imageView.image = UIImage(named: data.nameImage)
     }
     
     func addSubView() {
