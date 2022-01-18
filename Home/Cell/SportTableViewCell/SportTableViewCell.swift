@@ -31,6 +31,10 @@ class SportTableViewCell: UITableViewCell {
     func configConstraints() {
             self.sportTableViewCellScreen.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor)
     }
+    
+    public func dataCollection(data: [Sport]) {
+        
+    }
 }
 extension SportTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
