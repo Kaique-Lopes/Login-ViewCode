@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     var dataUser: [DataUser] = [DataUser(name: "Kaique", imageName: "men1"),
                              DataUser(name: "Joao", imageName: "men2"),
                              DataUser(name: "Joana", imageName: "girl1")]
+    var dataSport: [Sport] = [Sport(name: "Bob Marley", nameImage: "bob_marley")]
     
     override func loadView() {
         self.homescreen = HomeScreen()
