@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     var homescreen: HomeScreen?
-    var datas: [DataUser] = [DataUser(name: "Kaique", imageName: "men1"),
+    var dataUser: [DataUser] = [DataUser(name: "Kaique", imageName: "men1"),
                              DataUser(name: "Joao", imageName: "men2"),
                              DataUser(name: "Joana", imageName: "girl1")]
     
@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.datas.count + 1
+        return self.dataUser.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,7 +37,7 @@ extension HomeViewController: UITableViewDataSource{
         }
         
         let cell : UserDetailTableViewCell? = tableView.dequeueReusableCell(withIdentifier: UserDetailTableViewCell.identifier, for: indexPath) as? UserDetailTableViewCell
-        cell?.setupCell(data: self.datas[indexPath.row])
+        cell?.setupCell(data: self.dataUser[indexPath.row])
         return cell ?? UITableViewCell()
     }
 }
