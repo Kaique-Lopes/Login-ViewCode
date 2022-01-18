@@ -9,7 +9,7 @@ import UIKit
 
 class SportTableViewCell: UITableViewCell {
     var sportTableViewCellScreen: SportTableViewCellScreen = SportTableViewCellScreen()
-    
+    var data: [Sport] = []
     static var identifier: String = "SportTableViewCell"
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -33,12 +33,12 @@ class SportTableViewCell: UITableViewCell {
     }
     
     public func dataCollection(data: [Sport]) {
-        
+        self.data = data
     }
 }
 extension SportTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        return self.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
