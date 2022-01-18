@@ -34,6 +34,7 @@ extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 3 {
             let cell: SportTableViewCell? = tableView.dequeueReusableCell(withIdentifier: SportTableViewCell.identifier, for: indexPath) as? SportTableViewCell
+            cell?.dataCollection(data: self.dataSport)
             return cell ?? UITableViewCell()
         }
         
